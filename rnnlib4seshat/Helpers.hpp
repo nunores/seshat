@@ -391,7 +391,7 @@ template <class R, class T> static bool in(const R& r, const T& t) {
   return ::find(r, t) != boost::end(r);
 }
 template <class R, class T> static size_t index(const R& r, const T& t) {
-  return distance(boost::begin(r), ::find(r, t));
+  return boost::distance(boost::begin(r), ::find(r, t));
 }
 template <class R> static void reverse(R& r) {
   reverse(boost::begin(r), boost::end(r));
@@ -540,7 +540,7 @@ static size_t range_min_size (
       boost::size(d)), boost::size(e));
 }
 template <class R> static int arg_max(const R& r) {
-  return distance(boost::begin(r), max_element(boost::begin(r), boost::end(r)));
+  return boost::distance(boost::begin(r), max_element(boost::begin(r), boost::end(r)));
 }
 template <class R1, class R2>
 static pair<

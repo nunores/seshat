@@ -266,6 +266,26 @@ template <class T> static T bound (
     const T& v, const T& minVal, const T& maxVal) {
   return min(max(minVal, v), maxVal);
 }
+
+template <class C, class Tr, class R> static void print_range(
+    basic_ostream<C, Tr>& out, const R& r,
+    const basic_string<C, Tr>& delim = " ") {
+  typename range_const_iterator<R>::type b = boost::begin(r);
+  typename range_const_iterator<R>::type e = boost::end(r);
+  if (b != e) {
+    out << *b;
+    while (++b != e) {
+      out << delim << *b;
+    }
+  }
+}
+
+template <class C, class Tr, class R> static basic_ostream<C, Tr>& operator <<(
+    basic_ostream<C, Tr>& out, const R& r) {
+  print_range(out, r);
+  return out;
+}
+
 //CAST OPERATIONS
 template<class T> static string str(const T& t) {
   stringstream ss;
@@ -483,27 +503,12 @@ template<class R> static R& shuffle (R& r) {
 template <class R> static typename range_value<R>::type max(const R& r) {
   return *max_element(boost::begin(r), boost::end(r));
 }
-template <class C, class Tr, class R> static void print_range(
-    basic_ostream<C, Tr>& out, const R& r,
-    const basic_string<C, Tr>& delim = " ") {
-  typename range_const_iterator<R>::type b = boost::begin(r);
-  typename range_const_iterator<R>::type e = boost::end(r);
-  if (b != e) {
-    out << *b;
-    while (++b != e) {
-      out << delim << *b;
-    }
-  }
-}
+
 template <class C, class Tr, class R> static void print_range(
     basic_ostream<C, Tr>& out, const R& r, const char delim) {
   print_range(out, r, str(delim));
 }
-template <class C, class Tr, class R> static basic_ostream<C, Tr>& operator <<(
-    basic_ostream<C, Tr>& out, const R& r) {
-  print_range(out, r);
-  return out;
-}
+
 template <class C, class Tr, class R> static basic_istream<C, Tr>& operator >>(
     basic_istream<C, Tr>& in, R& r) {
   typename range_iterator<R>::type b = boost::begin(r);

@@ -41,7 +41,7 @@ class ProductionB{
 
   ProductionB(int s, int a, int b);
   ProductionB(int s, int a, int b, float pr, char *out);
-  ~ProductionB();
+  virtual ~ProductionB();
 
   float solape(Hypothesis *a, Hypothesis *b);
   void printOut(Grammar *G, Hypothesis *H);

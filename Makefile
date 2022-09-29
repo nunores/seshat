@@ -1,3 +1,4 @@
+APP=seshat
 CC=g++
 LINK=-lxerces-c -lm
 FLAGS = -O3 -Wno-unused-result -fpermissive -I/opt/xerces-c/include -L/opt/xerces-c/lib
@@ -11,7 +12,7 @@ RNNLIBHEADERS=rnnlib4seshat/DataSequence.hpp rnnlib4seshat/NetcdfDataset.hpp rnn
 OBJS=$(OBJFEAS) $(OBJMUESTRA) $(OBJPARSE) $(OBJTABLA) $(OBJRNNLIB)
 
 seshat: $(OBJS)
-	$(CC) -o seshat $(OBJS) $(FLAGS) $(LINK)
+	$(CC) -o $(APP) $(OBJS) $(FLAGS) $(LINK)
 
 seshat.o: seshat.cc grammar.o sample.o meparser.o
 	$(CC) -c seshat.cc $(FLAGS)
@@ -93,4 +94,4 @@ Optimiser.o: rnnlib4seshat/Optimiser.cpp
 	$(CC) -c rnnlib4seshat/Optimiser.cpp $(FLAGS)
 
 clean:
-	rm -f *.o *~ \#*\#
+	rm -f *.o $(APP)

@@ -43,7 +43,7 @@ along with RNNLIB.  If not, see <http://www.gnu.org/licenses/>.*/
 #include <boost/date_time.hpp>
 #include <boost/date_time/local_time/local_time.hpp>
 #include <boost/array.hpp>
-#include <boost/timer.hpp>
+#include <boost/timer/timer.hpp>
 #include <boost/assign/std/vector.hpp>
 #include <boost/range.hpp>
 #include <boost/iterator/counting_iterator.hpp>

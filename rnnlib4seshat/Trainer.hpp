@@ -42,7 +42,7 @@ along with RNNLIB.  If not, see <http://www.gnu.org/licenses/>.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <boost/timer.hpp>
+#include <boost/timer/timer.hpp>
 
 #include <map>
 #include <string>

@@ -56,7 +56,7 @@ Libraries] [6] (headers only).
 Finally, the parser accepts input files in two formats: InkML and
 SCGINK. There is a example of each format in folder
 "SampleMathExps". *Seshat* uses the [Xerces-c library] [7] for parsing
-InkML in C++.
+InkML in C++. Please install it first.
 
 
 
@@ -77,7 +77,9 @@ can proceed with the installation of *seshat* as follows:
  3. If the include files of boost libraries are not in the path, add
  it to the *FLAGS* variable in the file *Makefile* ("-I/path/to/boost/").
 
- 4. Compile *seshat*
+ 4. If the include and library files of xerces-c library are not in the path, add them to the *Makefile*
+
+ 5. Compile *seshat*
 
       $ make
 

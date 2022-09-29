@@ -1,6 +1,6 @@
 CC=g++
 LINK=-lxerces-c -lm
-FLAGS = -O3 -Wno-unused-result -fpermissive #-I/path/to/boost/
+FLAGS = -O3 -Wno-unused-result -fpermissive -I/opt/xerces-c/include -L/opt/xerces-c/lib
 
 OBJFEAS=symfeatures.o featureson.o online.o
 OBJMUESTRA=sample.o stroke.o

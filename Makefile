@@ -1,7 +1,7 @@
 APP=seshat
 CC=g++
 LINK=-lxerces-c -lm
-FLAGS = -O3 -Wno-unused-result -fpermissive -I/opt/xerces-c/include -L/opt/xerces-c/lib
+FLAGS = -O3 -Wno-unused-result -fpermissive -I/opt/xerces-c/include -L/opt/xerces-c/lib -I./boost_1_81_0
 
 OBJFEAS=symfeatures.o featureson.o online.o
 OBJMUESTRA=sample.o stroke.o

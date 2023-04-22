@@ -501,7 +501,7 @@ PBIN
 0.82331514 H BrTerm OpenPar TermPar "$1 $2" M
 0.01092896 H BrTerm Bar TermBar "$1 $2" M
 0.00182149 H BrTerm DBar TermDBar "$1 $2" M
-0.05282332 H BrTerm OpenBra TermBra "$1 $2" M
+0.95282332 H BrTerm OpenBra TermBra "$1 $2" M
 0.11293261 H BrTerm OpenBckt TermBckt "$1 $2" M
 0.66549772 H TermPar Term ClosePar "$1 $2" M
 0.00053952 H TermPar TermSSE ClosePar "$1 $2" M

@@ -23,6 +23,7 @@ seshat
 
 /boost_1_81_0
 /hmer_dataset
+/.vscode
 *.pgm
 *.inkml
 *.dot

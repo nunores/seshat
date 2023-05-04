@@ -64,6 +64,7 @@ struct Grammar
   void addRuleMrt(float pr, char *S, char *A, char *B, char *out, char *merge);
 
   bool isOperator(const char *str) const;
+  bool isNumber(const char *str) const;
 };
 
 #endif

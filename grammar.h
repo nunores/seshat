@@ -40,7 +40,7 @@ struct Grammar
   unordered_set<string> operatorSet = {"-", "+", "\\pm", "\\times", "\\div", "\\cdot", "=", "\\neq", "\\leq", "\\lt", "\\gt", "\\geq",
                                        "\\in", "\\rightarrow", "COMMA", "\\forall", "\\exists", "\\int", "\\sum", "\\log", "\\lim",
                                        "\\sin", "\\cos", "\\tan", "\\lbrace", "\\lbracket", "\\lpar", "\\rbrace", "\\rbracket", "\\rpar",
-                                       "\\prime", "\\vee", "\\wedge", "\\equiv", "\\cup"};
+                                       "\\prime", "\\vee", "\\wedge", "\\equiv", "\\cup", "\\{", "[", "(",  "\\}", "]", ")"};
 
   list<ProductionB *> prodsH, prodsSup, prodsSub;
   list<ProductionB *> prodsV, prodsVe, prodsIns, prodsMrt, prodsSSE;

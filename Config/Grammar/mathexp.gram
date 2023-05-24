@@ -298,6 +298,8 @@ PTERM
 1.00000000 OpUn 7 \neg
 1.00000000 OpBin u \cup
 1.00000000 Sym equal =
+0.80000000 Sym \lt \lt
+0.80000000 Sym \gt \gt
 
 
 PBIN
